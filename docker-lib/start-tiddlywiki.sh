@@ -3,6 +3,10 @@ MYNAME=`basename "$0"`
 MYFULLNAME="$PWD/$MYNAME"
 MYDIR=`dirname "$MYFULLNAME"`
 
+#####
+# This file runs within the docker container to start TiddlyWiki
+#####
+
 die () {
   echo ""
 	echo >&2 "$@"

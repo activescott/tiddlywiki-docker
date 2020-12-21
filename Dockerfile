@@ -6,10 +6,7 @@ RUN npm install -g tiddlywiki@5.1.22
 VOLUME /mnt/wikidata
 WORKDIR /mnt/wikidata
 
-# Specifies the TiddlyWiki username/password parameters: https://tiddlywiki.com/#ListenCommand
-#ENV TW_USERNAME=${TW_USERNAME}
-#ENV TW_PASSWORD=${TW_PASSWORD}
-
-CMD ["/mnt/wikidata/start-tiddlywiki.sh"]
+ADD docker-lib/start-tiddlywiki.sh /usr/local/lib/tiddlywiki/start-tiddlywiki.sh
+CMD ["/usr/local/lib/tiddlywiki/start-tiddlywiki.sh"]
 
 EXPOSE 8000
